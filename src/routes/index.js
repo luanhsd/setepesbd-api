@@ -9,6 +9,7 @@ const PhysicianController = require('../controllers/PhysicianController');
 const PhysicianSpecialtyController = require('../controllers/PhysicianSpecialtyController');
 const ProfileController = require('../controllers/ProfileController');
 const SpecialtyController = require('../controllers/SpecialtyController');
+const AttendanceController = require('../controllers/AttendanceController');
 
 routes.group("/api", (router) => {
 
@@ -54,6 +55,12 @@ routes.group("/api", (router) => {
     router.put("/specialties/:id", SpecialtyController.update)
     router.delete("/specialties/:id", SpecialtyController.destroy)
 
+    //Attendances's routes
+    router.get("/attendances", AttendanceController.index)
+    router.get("/attendances/:attribute", AttendanceController.show)
+    router.post("/attendances", AttendanceController.store)
+    router.get("/attendances/:attribute", AttendanceController.update)
+    router.get("/attendances/:attribute", AttendanceController.destroy)
 });
 
 module.exports = routes;
