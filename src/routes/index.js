@@ -57,10 +57,10 @@ routes.group("/api", (router) => {
 
     //Attendances's routes
     router.get("/attendances", AttendanceController.index)
-    router.get("/attendances/:attribute", AttendanceController.show)
+    //router.get("/attendances/:id", AttendanceController.show)
     router.post("/attendances", AttendanceController.store)
-    router.get("/attendances/:attribute", AttendanceController.update)
-    router.get("/attendances/:attribute", AttendanceController.destroy)
+    //router.put("/attendances/:attribute", AttendanceController.update)
+    //router.delete("/attendances/:attribute", AttendanceController.destroy)
 });
 
 module.exports = routes;
